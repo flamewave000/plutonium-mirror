@@ -3,7 +3,6 @@
 	"description": "An Add-On for defining which Mirror to use for 5e Tools.",
 	"version": "1.0",
 	"manifest_version": 2,
-	"license": "bsd-3-clause",
 	"icons": {
 		"16": "icons/favicon-16x16.png",
 		"32": "icons/favicon-32x32.png",
@@ -35,7 +34,5 @@
 			"144": "icons/favicon-144x144.png",
 			"256": "icons/favicon-256x256.png"
 		}
-	},
-	"dev-mozilla-add-ons": "https://addons.mozilla.org/en-US/developers/addons",
-	"dev-chrome-extensions": "https://chrome.google.com/webstore/devconsole"
+	}
 }
