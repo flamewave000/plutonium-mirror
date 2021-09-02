@@ -19,7 +19,7 @@ packMozilla() {
 	mv .mozilla-build/web-ext-artifacts/*.xpi "releases/plutonium-mirror-$version.xpi"
 	mv .mozilla-build/.web-extension-id ./.web-extension-id
 	# delete the intermediary build directory
-	# rm -R .mozilla-build
+	rm -R .mozilla-build
 }
 
 packChrome() {
