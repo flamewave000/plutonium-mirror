@@ -35,5 +35,7 @@
 			"144": "icons/favicon-144x144.png",
 			"256": "icons/favicon-256x256.png"
 		}
-	}
+	},
+	"dev-mozilla-add-ons": "https://addons.mozilla.org/en-US/developers/addons",
+	"dev-chrome-extensions": "https://chrome.google.com/webstore/devconsole"
 }
