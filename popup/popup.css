@@ -38,9 +38,17 @@ a:active {
 	color: #05467a;
 }
 
-p#insecure {
+p.error {
 	width: max-content;
 	color: #ff7373;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: bold;
+}
+p.warning {
+	width: max-content;
+	color: #e2d380;
 	margin-top: 0;
 	margin-left: auto;
 	margin-right: auto;

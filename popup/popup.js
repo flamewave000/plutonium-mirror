@@ -12,6 +12,8 @@ const linkSelect = document.getElementById('link-select');
 const linkCustom = document.getElementById('link-custom');
 const saveButton = document.getElementById('save');
 const errorInsecure = document.getElementById('insecure');
+const errorFiles = document.getElementById('files');
+const errorUnsupported = document.getElementById('unsupported');
 //#endregion
 
 //#region Event Registrations
@@ -63,15 +65,19 @@ async function handleChangeEvent() {
 		if (!custom.endsWith('/')) {
 			custom += '/';
 		}
-		if (!(/^https?:\/\/.+/).test(custom)) {
-			const idx = custom.indexOf('//');
-			if (idx > -1) {
-				custom = custom.slice(idx + 2);
-			}
-			custom = 'http://' + custom;
-		}
-		setVisible(errorInsecure, !custom.startsWith('https'));
+		// if (!(/^file:\/\/\/.+/).test(custom) && !(/^https?:\/\/.+/).test(custom)) {
+		// 	const idx = custom.indexOf('//');
+		// 	if (idx > -1) {
+		// 		custom = custom.slice(idx + 2);
+		// 	}
+		// 	custom = 'http://' + custom;
+		// }
+
+		setVisible(errorUnsupported, !(/^(file|https?):\/\/\/?.+/).test(custom));
+		setVisible(errorFiles, custom.startsWith('file:'));
+		setVisible(errorInsecure, custom.startsWith('http:'));
 	} else {
+		setVisible(errorFiles, false);
 		setVisible(errorInsecure, false);
 	}
 	linkCustom.value = custom;
@@ -115,5 +121,7 @@ async function resetSettings() {
 	setEnabled(saveButton, false);
 	setEnabled(linkSelect, enabled);
 	setEnabled(linkCustom, enabled && mirror === 'custom');
-	setVisible(errorInsecure, mirror === 'custom' && custom.length > 0 && !custom.startsWith('https'));
+	setVisible(errorInsecure, mirror === 'custom' && custom.length > 0 && custom.startsWith('http:'));
+	setVisible(errorFiles, mirror === 'custom' && custom.length > 0 && custom.startsWith('file:'));
+	setVisible(errorUnsupported, mirror === 'custom' && custom.length > 0 && !(/^(file|https?):\/\/\/?.+/).test(custom));
 })();

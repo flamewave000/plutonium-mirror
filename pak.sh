@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version=`cat manifest.json | gawk 'match($0, /version":\s*"([0-9\.]+)"/, m) { print m[1]; }'`
+version=`cat manifest.json | gawk 'match($0, /version":\s*"([0-9\.]+d?)"/, m) { print m[1]; }'`
 echo "Packing v$version"
 
 packMozilla() {
