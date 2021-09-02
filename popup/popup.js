@@ -1,6 +1,6 @@
 const env = chrome || browser;
 
-const VERSION = 1;
+const VERSION = chrome.runtime.getManifest().version;
 const DEF_ENABLED = true;
 const DEF_MIRROR = 'main';
 const DEF_CUSTOM = '';
