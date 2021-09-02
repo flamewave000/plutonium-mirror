@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+	<label class="switch">
+		<input type="checkbox" id="enabled">
+		<span class="slider round"></span>
+	</label>
+	<label for="enabled">Enabled</label>
+	<a id="reset" title="Reset Settings">&#x21bb;</a>
+	<h1>Configure 5e Tools Mirror Link </h1>
+
+	<table>
+		<tbody>
+			<tr>
+				<td><label for="link-select">Select a Mirror </label></td>
+				<td>
+					<select id="link-select">
+						<option value="main">https://5e.tools/</option>
+						<option value="mirror1">https://5etools-mirror-1.github.io/</option>
+						<option value="custom">Custom URL</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="link-custom">Custom Mirror </label></td>
+				<td><input id="link-custom" type="url" placeholder="https://my-5e.tools/" disabled></td>
+			</tr>
+		</tbody>
+	</table>
+	<p id="insecure" style="display:none">! Recommend using a secure mirror with HTTPS !</p>
+	<button id="save" disabled>save changes</button>
+	<script src="popup.js"></script>
+</body>
+
+</html>
