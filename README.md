@@ -1,11 +1,32 @@
-# plutonium-mirror
+# Plutonium Mirror [![Latest Version](https://img.shields.io/github/v/release/flamewave000/plutonium-mirror?label=Latest%20Release)](https://github.com/flamewave000/plutonium-mirror/releases/latest)
 An Add-On for defining which Mirror to use for 5e Tools
 
+![Extension In Action](.assets/config.png)
+
+[![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Ddragonflagon%26type%3Dpatrons&style=for-the-badge)](https://patreon.com/dragonflagon)
+
 ## Chromium Browsers (Chrome, Brave, Edge, Vivaldi, Epic, Slim, Torch, Comodo)
-For all Chromium based browsers, you can find the extension in the [Chrome Web Store]()
+
+For all Chromium based browsers, you can find the extension in the [~~Chrome Web Store~~ Currently Pending Review](#)  
+Or you can install it manually using the following steps:
+
+1. Download the `plutonium-mirror-X.X.zip` file from the [Latest Release](https://github.com/flamewave000/plutonium-mirror/releases/latest)
+2. Open your browser's extensions page (ie. `chrome://extensions` or `brave://extensions`)
+3. In the top right corner, toggle ON the "Developer mode" switch.
+4. Drag+Drop the `plutonium-mirror-X.X.zip` file onto the extensions page.
+5. Enjoy!
 
 ## Mozilla Firefox
-For Firefox browsers, you can find the extension in the [Firefox Add-On Store]()
+
+For Firefox browsers, you can find the extension in the [~~Firefox Add-On Store~~ Currently Pending Review](#)  
+Or you can install it manually using the following steps:
+
+1. Download the `plutonium-mirror-X.X.xpi` file from the [Latest Release](https://github.com/flamewave000/plutonium-mirror/releases/latest)
+2. Open your firefox's "Add-ons and Themes" page (ie. `about:addons`)
+3. In the top right corner, toggle ON the "Developer mode" switch.
+4. Drag+Drop the `plutonium-mirror-X.X.xpi` file onto the Add-ons page.
+5. Click "Add" on the prompt that appears.
+6. Enjoy!
 
 ## For Developers
 
