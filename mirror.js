@@ -51,6 +51,8 @@ env.webRequest.onBeforeRequest.addListener(
 		var host = '';
 		if (mirror === 'custom') host = custom;
 		else if (mirror === 'mirror1') host = 'https://5etools-mirror-1.github.io/';
+		else if (mirror === 'mirror2') host = 'https://thegiddylimit.github.io/';
+		else if (mirror === 'mirror3') host = 'https://5e-tools.dragonflagon.cafe/';
 		/* // TODO: If there are any more common mirrors, add them here
 		if (mirror === 'mirror#') host = 'https://##.##.##/';
 		*/
