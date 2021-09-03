@@ -1,44 +1,30 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<link rel="stylesheet" href="popup.css">
-</head>
-
+<head><link rel="stylesheet" href="popup.css"></head>
 <body>
-	<label class="switch">
-		<input type="checkbox" id="enabled">
-		<span class="slider round"></span>
-	</label>
+	<label class="switch"><input type="checkbox" id="enabled"><span class="slider round"></span></label>
 	<label for="enabled">Enabled</label>
 	<a id="reset" title="Reset Settings">&#x21bb;</a>
 	<h1>Configure 5e Tools Mirror Link </h1>
-
 	<table>
 		<tbody>
 			<tr>
 				<td><label for="link-select">Select a Mirror </label></td>
-				<td>
-					<select id="link-select">
-						<option value="main">https://5e.tools/</option>
-						<option value="mirror1">https://5etools-mirror-1.github.io/</option>
-						<option value="mirror2">https://thegiddylimit.github.io/</option>
-						<option value="mirror3">https://5e-tools.dragonflagon.cafe/</option>
-						<option value="custom">Custom URL</option>
-					</select>
-				</td>
+				<td><select id="link-select"></select></td>
 			</tr>
-			<tr>
+			<tr id="custom-row">
 				<td><label for="link-custom">Custom Mirror </label></td>
-				<td><input id="link-custom" type="url" placeholder="https://my-5e.tools/" disabled></td>
+				<td><input id="link-custom" type="url" placeholder="https://my-5e.tools/"></td>
+			</tr>
+			<tr id="extension-row">
+				<td><label for="link-extension">Pick Extension </label></td>
+				<td><select id="link-extension"><option value=""></option></select></td>
 			</tr>
 		</tbody>
 	</table>
-	<p id="insecure" class="warning" style="display:none">! Recommend using a secure mirror with HTTPS !</p>
-	<p id="files" class="warning" style="display:none">! Beware file URLs as they only work for you !</p>
-	<p id="unsupported" class="error" style="display:none">! Beware Unsupported URL Schema !</p>
+	<p id="insecure" class="warning" style="display:none">! Warning: Recommend using mirrors with HTTPS !</p>
+	<p id="unsupported" class="error" style="display:none">! Error: Unsupported URL Schema !</p>
 	<button id="save" disabled>save changes</button>
 	<script src="popup.js"></script>
 </body>
-
 </html>

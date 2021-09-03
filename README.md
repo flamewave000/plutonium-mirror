@@ -28,6 +28,10 @@ Or you can install it manually using the following steps:
 5. Click "Add" on the prompt that appears.
 6. Enjoy!
 
+## How to Use Local Files
+
+In order to use local files for your images, you have to be using a Chromium based browser (Chrome, Brave, Edge, Vivaldi, Epic, Slim, Torch, Comodo, etc.). This is due to Firefox's Add-On Signing restrictions which are basically just a huge PITA. To find out how to do this for chromium, go to the [How To Use Local](HowToUseLocal.md) guide.
+
 ## For Developers
 
 This extension is designed to work in both Chromium and Firefox browsers using the exact same JavaScript/Manifest/HTML. Please adhere to this and make sure to test all changes in both browsers.

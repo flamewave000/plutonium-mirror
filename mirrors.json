@@ -1,0 +1,8 @@
+{
+	"main": "https://5e.tools/",
+	"mirror1": "https://5etools-mirror-1.github.io/",
+	"mirror2": "https://thegiddylimit.github.io/",
+	"mirror3": "https://5e-tools.dragonflagon.cafe/",
+	"extension": "Use Chrome Extension as Mirror",
+	"custom": "Custom URL"
+}
