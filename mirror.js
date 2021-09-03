@@ -50,7 +50,7 @@ env.webRequest.onBeforeRequest.addListener(
 		// Determine the host URL
 		var host = '';
 		if (mirror === 'custom') host = custom;
-		if (mirror === 'mirror1') host = 'https://5etools-mirror-1.github.io/';
+		else if (mirror === 'mirror1') host = 'https://5etools-mirror-1.github.io/';
 		/* // TODO: If there are any more common mirrors, add them here
 		if (mirror === 'mirror#') host = 'https://##.##.##/';
 		*/
