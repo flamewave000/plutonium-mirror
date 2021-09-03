@@ -43,11 +43,15 @@ You start by downloading all of the images, then create a fake chrome extension 
 
 ### Step 3. Add the Extension to Your Browser
 
-- Open your browser's extensions page. This is found in the browser's side menu. ![](.assets/ext-page.png)
-- In the upper-right corner you will see a toggle switch that says "Developer mode". Turn this ON ![](.assets/dev-mode.png)
-- You will now see a button that says "Load unpacked". Click this button. ![](.assets/load-unpacked.png)
+- Open your browser's extensions page. This is found in the browser's side menu.  
+![](.assets/ext-page.png)
+- In the upper-right corner you will see a toggle switch that says "Developer mode". Turn this ON  
+![](.assets/dev-mode.png)
+- You will now see a button that says "Load unpacked". Click this button.  
+![](.assets/load-unpacked.png)
 - It will present a dialog asking you to select a folder. Navigate to the folder that contains your newly created `manifest.json` file and open that folder.
-- You should now see a new extension called "5e Tools Images" ![](.assets/new-ext.png)
+- You should now see a new extension called "5e Tools Images"  
+![](.assets/new-ext.png)
 
 ### Step 4. Switch to the new Extension Mirror
 
