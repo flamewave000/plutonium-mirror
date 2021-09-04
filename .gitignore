@@ -3,3 +3,4 @@ web-ext-artifacts/
 *.xpi
 .mozilla-build
 releases/
+.creds

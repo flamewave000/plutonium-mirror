@@ -6,9 +6,7 @@ echo "Packing v$version"
 packMozilla() {
 	mkdir -p .mozilla-build
 	# Copy files to build directory
-	cp -r icons .mozilla-build/icons
-	cp -r popup .mozilla-build/popup
-	cp LICENSE manifest.json mirror.js .web-extension-id .mozilla-build/
+	cp -r icons popup LICENSE *.json *.js .web-extension-id .mozilla-build/
 	# move into directory and perform package and signing
 	cd .mozilla-build
 	web-ext sign --api-key="$1" --api-secret="$2"
@@ -25,7 +23,7 @@ packMozilla() {
 packChrome() {
 	output="plutonium-mirror-$version.zip"
 	mkdir -p releases
-	zip -r "releases/$output" "icons/" "popup/" "LICENSE" "manifest.json" "mirror.js"
+	zip -r "releases/$output" "icons/" "popup/" "LICENSE" *.json *.js
 }
 
 
