@@ -18,7 +18,7 @@ Or you can install it manually using the following steps:
 
 ## Mozilla Firefox
 
-For Firefox browsers, you can find the extension in the [~~Firefox Add-On Store~~ Currently Pending Review](#)  
+For Firefox browsers, you can find the extension in the [Firefox Add-On Store](https://addons.mozilla.org/en-CA/firefox/addon/plutonium-mirror/)  
 Or you can install it manually using the following steps:
 
 1. Download the `plutonium-mirror-X.X.xpi` file from the [Latest Release](https://github.com/flamewave000/plutonium-mirror/releases/latest)
