@@ -6,6 +6,18 @@ const DEF_MIRROR = 'main';
 const DEF_CUSTOM = '';
 const DEF_EXTENSION = '';
 
+// Target Filters
+// We are only going to intercept URLs that match these
+const filterUrls = [
+	"*://5e.tools/*",
+	"*://5etools-mirror-1.github.io/*",
+	"*://thegiddylimit.github.io/*",
+	"*://5e-tools.dragonflagon.cafe/*",
+	"*://imgsrv.roll20.net/*"
+];
+// We intercept ALL kinds of requests
+const filterTypes = ["main_frame", "sub_frame", "stylesheet", "script", "image", "font", "object", "xmlhttprequest", "ping", "csp_report", "media", "websocket", "other"];
+
 // Settings Data
 const data = {
 	version: VERSION,
@@ -13,13 +25,15 @@ const data = {
 	mirror: DEF_MIRROR,
 	custom: DEF_CUSTOM,
 	extension: DEF_EXTENSION
-}
+};
 var mirrors = {};
+var mirrorSet = new Set();
 // Listen for changes to the extension settings
 env.storage.onChanged.addListener(changeSet => {
 	for (let key of Object.keys(changeSet)) {
 		data[key] = changeSet[key].newValue;
 	}
+	bindListeners();
 });
 
 // When we are first installed, set the default settings
@@ -44,6 +58,11 @@ env.storage.sync.get(({ version, enabled, mirror, custom, extension }) => {
 	data.mirror = mirror;
 	data.custom = custom;
 	data.extension = extension;
+	mirrorSet.clear();
+	for (let mirror of Object.keys(mirrors)) {
+		mirrorSet.add(getMirrorUrl(mirror));
+	}
+	bindListeners();
 });
 
 // Retrieve the mirror list
@@ -51,33 +70,61 @@ fetch(env.runtime.getURL('mirrors.json'))
 	.then(res => res.json())
 	.then(mirrorsObject => {
 		mirrors = mirrorsObject;
+		mirrorSet.clear();
+		for (let mirror of Object.keys(mirrors)) {
+			mirrorSet.add(getMirrorUrl(mirror));
+		}
+		bindListeners();
 	});
 
-// Bind interceptor for redirecting 5e.tools https requests
-env.webRequest.onBeforeRequest.addListener(
-	function (details) {
-		// if we are disabled, return immediately
-		if (!data.enabled) return;
-		const { mirror, custom, extension } = data;
-		// Determine the host URL
-		var host = '';
-		if (mirror === 'custom') host = custom;
-		else if(mirror === 'extension') host = `chrome-extension://${extension}/`
-		else host = mirrors[mirror];
+function getMirrorUrl(mirror) {
+	const { custom, extension } = data;
+	mirror = mirror || data.mirror;
+	// Determine the host URL
+	if (mirror === 'custom') return custom;
+	else if (mirror === 'extension') return `chrome-extension://${extension}/`;
+	else return mirrors[mirror];
+}
+
+// const regex_roll20ImageSrvSrc = /\/\?(.+&)?src=(.+)(&.+)?/;
+const regex_roll20ImageSrvCheck = /^https?:\/\/([^\/]+\/)[\S\s]*/;
+const regex_domain = /(^https?:\/\/[^\/]+\/)[\S\s]*/;
+const regex_query = /^https?:\/\/[^\/]+\/([\S\s]*)(\?[\S\s]+)?$/;
+
+function onBeforeRequest(details) {
+	// if we are disabled, return immediately
+	if (!data.enabled) return;
+	// Determine the host URL
+	var host = getMirrorUrl();
+	// Ignore links that are already going to our Target Mirror
+	if (host === regex_domain.exec(details.url)[1]) return;
+	// Extract Query
+	var query = undefined;
+	if (regex_roll20ImageSrvCheck.exec(details.url)[1] === 'imgsrv.roll20.net/') {
+		const originalUrl = new URL(details.url);
+		const url = decodeURIComponent(originalUrl.searchParams.get('src'));
+		const domain = regex_domain.exec(url)[1]
+		// Ignore links that are not relevant 5e-tools URLs
+		if (!mirrorSet.has(domain)) return;
 		// Ignore links that are already going to our Target Mirror
-		if (host === details.url.match(/(^https?:\/\/[^\/]+\/)[\S\s]*/)[1]) return;
-		// Redirect to the target mirror host
-		return { redirectUrl: host + details.url.match(/^https?:\/\/[^\/]+\/([\S\s]*)/)[1] };
-	},
-	{
-		// We are only going to intercept URLs that match these
-		urls: [
-			"*://5e.tools/*",
-			"*://5etools-mirror-1.github.io/*"
-		],
-		// We intercept ALL kinds of requests
-		types: ["main_frame", "sub_frame", "stylesheet", "script", "image", "font", "object", "xmlhttprequest", "ping", "csp_report", "media", "websocket", "other"]
-	},
-	// We block calls until our handler completes
-	["blocking"]
-);
+		if (domain === host) return;
+		query = regex_query.exec(url)[1];
+	}
+	else query = regex_query.exec(details.url)[1];
+	// Redirect to the target mirror host
+	return { redirectUrl: host + query };
+}
+
+function bindListeners() {
+	if (mirrors[DEF_MIRROR] === undefined) return;
+	if (env.webRequest.onBeforeRequest.hasListener(onBeforeRequest))
+		env.webRequest.onBeforeRequest.removeListener(onBeforeRequest);
+	if (!data.enabled) return;
+	// Bind interceptor for redirecting 5e.tools https requests
+	env.webRequest.onBeforeRequest.addListener(
+		onBeforeRequest,
+		{ urls: data.custom.length == 0 ? filterUrls : filterUrls.concat([data.custom + '*']), types: filterTypes },
+		// We block calls until our handler completes
+		["blocking"]
+	);
+}
