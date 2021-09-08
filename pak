@@ -1,15 +1,22 @@
 #!/bin/bash
 
-version=`cat manifest.json | gawk 'match($0, /version":\s*"([0-9\.]+d?)"/, m) { print m[1]; }'`
+version=`cat src/manifest.json | gawk 'match($0, /version":\s*"([0-9\.]+d?)"/, m) { print m[1]; }'`
 echo "Packing v$version"
 
 packMozilla() {
+	if [ -z "$1" ]; then
+		test -f ".creds" || { echo "You must provide credentials for mozilla"; exit 1; }
+		source ".creds"
+	else
+		jwt_issuer="$1"
+		jwt_secret="$2"
+	fi
 	mkdir -p .mozilla-build
 	# Copy files to build directory
-	cp -r icons popup LICENSE *.json *.js .web-extension-id .mozilla-build/
+	cp -r src/* .web-extension-id .mozilla-build/
 	# move into directory and perform package and signing
 	cd .mozilla-build
-	web-ext sign --api-key="$1" --api-secret="$2"
+	web-ext sign --api-key="$jwt_issuer" --api-secret="$jwt_secret" || { cd ..; rm -R .mozilla-build; exit 1; }
 	# move back to root
 	cd ..
 	# move the new Add-On and ID file back to root
@@ -21,9 +28,10 @@ packMozilla() {
 }
 
 packChrome() {
-	output="plutonium-mirror-$version.zip"
 	mkdir -p releases
-	zip -r "releases/$output" "icons/" "popup/" "LICENSE" *.json *.js
+	cd src
+	zip -r "../releases/plutonium-mirror-$version.zip" ./
+	cd ..
 }
 
 
