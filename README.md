@@ -1,7 +1,7 @@
 # Plutonium Mirror
 
-[![Latest Version](https://img.shields.io/github/v/release/flamewave000/plutonium-mirror?label=Latest%20Release)](https://github.com/flamewave000/plutonium-mirror/releases/latest)![GitHub](https://img.shields.io/github/license/flamewave000/plutonium-mirror?color=orange&label=License)![GitHub Release Date](https://img.shields.io/github/release-date/flamewave000/plutonium-mirror)  
-![Permissions](https://img.shields.io/badge/dynamic/json?label=Permissions&query=permissions%5B0%2C1%2C2%2C3%5D&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fsrc%2Fmanifest.json)
+[![Latest Version](https://img.shields.io/github/v/release/flamewave000/plutonium-mirror?label=Latest%20Release)](https://github.com/flamewave000/plutonium-mirror/releases/latest)[![GitHub](https://img.shields.io/github/license/flamewave000/plutonium-mirror?color=orange&label=License)](LICENSE)[![GitHub Release Date](https://img.shields.io/github/release-date/flamewave000/plutonium-mirror)](https://github.com/flamewave000/plutonium-mirror/releases/latest)  
+[![Permissions](https://img.shields.io/badge/dynamic/json?label=Permissions&query=permissions%5B0%2C1%2C2%2C3%5D&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fsrc%2Fmanifest.json)](src/manifest.json)
 
 An Add-On for defining which Mirror to use for 5e Tools
 
@@ -20,7 +20,7 @@ Or you can install it manually using the following steps:
 4. Drag+Drop the `plutonium-mirror-X.X.zip` file onto the extensions page.
 5. Enjoy!
 
-## Mozilla Firefox ![Mozilla Add-on](https://img.shields.io/amo/users/plutonium-mirror?label=Mozilla%20Users)
+## Mozilla Firefox [![Mozilla Add-on](https://img.shields.io/amo/users/plutonium-mirror?label=Mozilla%20Users)](https://addons.mozilla.org/en-CA/firefox/addon/plutonium-mirror/)
 
 For Firefox browsers, you can find the extension in the [Firefox Add-On Store](https://addons.mozilla.org/en-CA/firefox/addon/plutonium-mirror/)  
 Or you can install it manually using the following steps:
@@ -38,9 +38,15 @@ In order to use local files for your images, you have to be using a Chromium bas
 
 ## Download Statistics
 
-![GitHub all releases](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/total?label=Total%20Downloads)![GitHub release (latest by date)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/latest/total)  
-v2.x ![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.2/total)![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.1/total)![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.0/total)  
-v1.x ![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v1.2/total)![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v1.1/total)![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v1.0/total)
+[![GitHub all releases](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/total?label=Total%20Downloads)]()
+[![GitHub release (latest by date)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/latest/total)](https://github.com/flamewave000/plutonium-mirror/releases/latest)  
+v2.x [![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.3/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v2.3)
+[![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.2/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v2.2)
+[![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.1/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v2.1)
+[![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.0/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v2.0)  
+v1.x [![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v1.2/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v1.2)
+[![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v1.1/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v1.1)
+[![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v1.0/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v1.0)
 
 ## Mirror List
 
