@@ -116,7 +116,7 @@ async function resetSettings() {
 //#region layout initialization
 async function populateMirrors() {
 	return new Promise((res, _) => {
-		const url = env.runtime.getURL('mirrors.json');
+		const url = 'https://raw.githubusercontent.com/flamewave000/plutonium-mirror/master/mirrors.json';
 		fetch(url)
 			.then(response => response.json())
 			.then(mirrors => {

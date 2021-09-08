@@ -8,13 +8,7 @@ const DEF_EXTENSION = '';
 
 // Target Filters
 // We are only going to intercept URLs that match these
-const filterUrls = [
-	"*://5e.tools/*",
-	"*://5etools-mirror-1.github.io/*",
-	"*://thegiddylimit.github.io/*",
-	"*://5e-tools.dragonflagon.cafe/*",
-	"*://imgsrv.roll20.net/*"
-];
+const filterUrls = [];
 // We intercept ALL kinds of requests
 const filterTypes = ["main_frame", "sub_frame", "stylesheet", "script", "image", "font", "object", "xmlhttprequest", "ping", "csp_report", "media", "websocket", "other"];
 
@@ -66,13 +60,19 @@ env.storage.sync.get(({ version, enabled, mirror, custom, extension }) => {
 });
 
 // Retrieve the mirror list
-fetch(env.runtime.getURL('mirrors.json'))
+fetch('https://raw.githubusercontent.com/flamewave000/plutonium-mirror/master/mirrors.json')
 	.then(res => res.json())
 	.then(mirrorsObject => {
 		mirrors = mirrorsObject;
 		mirrorSet.clear();
 		for (let mirror of Object.keys(mirrors)) {
-			mirrorSet.add(getMirrorUrl(mirror));
+			const mirrorUrl = getMirrorUrl(mirror);
+			// Ignore custom/extension mirrors that have not been defined
+			if (mirrorUrl.trim().length <= 0) continue;
+			mirrorSet.add(mirrorUrl);
+			// Add each mirror to the list of redirectable URLs
+			if (mirror === 'extension') filterUrls.push(mirrorUrl.concat('*'));
+			else filterUrls.push(mirrorUrl.replace(/^.+:/, '*:').concat('*'));
 		}
 		bindListeners();
 	});
@@ -82,11 +82,10 @@ function getMirrorUrl(mirror) {
 	mirror = mirror || data.mirror;
 	// Determine the host URL
 	if (mirror === 'custom') return custom;
-	else if (mirror === 'extension') return `chrome-extension://${extension}/`;
+	else if (mirror === 'extension') return extension.trim().length > 0 ? `chrome-extension://${extension}/` : '';
 	else return mirrors[mirror];
 }
 
-// const regex_roll20ImageSrvSrc = /\/\?(.+&)?src=(.+)(&.+)?/;
 const regex_roll20ImageSrvCheck = /^https?:\/\/([^\/]+\/)[\S\s]*/;
 const regex_domain = /(^https?:\/\/[^\/]+\/)[\S\s]*/;
 const regex_query = /^https?:\/\/[^\/]+\/([\S\s]*)(\?[\S\s]+)?$/;
