@@ -38,15 +38,15 @@ In order to use local files for your images, you have to be using a Chromium bas
 
 ## Download Statistics
 
-![GitHub all releases](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/total?label=Total Downloads)![GitHub release (latest by date)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/latest/total) 
+![GitHub all releases](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/total?label=Total%20Downloads)![GitHub release (latest by date)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/latest/total)  
 v2.x ![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.2/total)![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.1/total)![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.0/total)  
 v1.x ![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v1.2/total)![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v1.1/total)![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v1.0/total)
 
 ## Mirror List
 
-[![Official Mirror](https://img.shields.io/badge/dynamic/json?label=Official%20Mirror&query=mirror1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://5etools-mirror-1.github.io)
-[![Giddy's Mirror](https://img.shields.io/badge/dynamic/json?label=Giddy&query=mirror2&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://thegiddylimit.github.io)
-[![DragonFlagon Mirror](https://img.shields.io/badge/dynamic/json?label=DragonFlagon&query=mirror3&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://5e-tools.dragonflagon.cafe)
+[![Official Mirror](https://img.shields.io/badge/dynamic/json?label=Official%20Mirror&query=mirror1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://5etools-mirror-1.github.io)  
+[![Giddy's Mirror](https://img.shields.io/badge/dynamic/json?label=Giddy&query=mirror2&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://thegiddylimit.github.io)  
+[![DragonFlagon Mirror](https://img.shields.io/badge/dynamic/json?label=DragonFlagon&query=mirror3&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://5e-tools.dragonflagon.cafe)  
 [![Butterfly's Mirror](https://img.shields.io/badge/dynamic/json?label=Butterfly&query=mirror4&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://dnd5e.eclipseofbutterflies.ml)
 
 ## For Developers
