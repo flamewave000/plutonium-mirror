@@ -11,8 +11,9 @@ An Add-On for defining which Mirror to use for 5e Tools
 
 ## Chromium Browsers (Chrome, Brave, Edge, Vivaldi, Epic, Slim, Torch, Comodo)
 
-For all Chromium based browsers, you can find the extension in the [~~Chrome Web Store~~ Currently Pending Review](#)  
-Or you can install it manually using the following steps:
+For all Chromium based browsers, you can find the extension in the [Chrome Web Store](https://chrome.google.com/webstore/detail/plutonium-mirror/cmdfdklimdbgkakbnplpohmekimalljl)
+
+### Manual Chromium Installation
 
 1. Download the `plutonium-mirror-X.X.zip` file from the [Latest Release](https://github.com/flamewave000/plutonium-mirror/releases/latest)
 2. Open your browser's extensions page (ie. `chrome://extensions` or `brave://extensions`)
@@ -22,8 +23,9 @@ Or you can install it manually using the following steps:
 
 ## Mozilla Firefox [![Mozilla Add-on](https://img.shields.io/amo/users/plutonium-mirror?label=Mozilla%20Users)](https://addons.mozilla.org/en-CA/firefox/addon/plutonium-mirror/)
 
-For Firefox browsers, you can find the extension in the [Firefox Add-On Store](https://addons.mozilla.org/en-CA/firefox/addon/plutonium-mirror/)  
-Or you can install it manually using the following steps:
+For Firefox browsers, you can find the extension in the [Firefox Add-On Store](https://addons.mozilla.org/en-CA/firefox/addon/plutonium-mirror/)
+
+### Manual Firefox Installation
 
 1. Download the `plutonium-mirror-X.X.xpi` file from the [Latest Release](https://github.com/flamewave000/plutonium-mirror/releases/latest)
 2. Open your Firefox's "Add-Ons and Themes" page (ie. `about:addons`)
