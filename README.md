@@ -42,7 +42,8 @@ In order to use local files for your images, you have to be using a Chromium bas
 
 [![GitHub all releases](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/total?label=Total%20Downloads)]()
 [![GitHub release (latest by date)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/latest/total)](https://github.com/flamewave000/plutonium-mirror/releases/latest)  
-v2.x [![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.3/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v2.3)
+v2.x [![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.4/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v2.4)
+[![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.3/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v2.3)
 [![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.2/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v2.2)
 [![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.1/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v2.1)
 [![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewave000/plutonium-mirror/v2.0/total)](https://github.com/flamewave000/plutonium-mirror/releases/tag/v2.0)  

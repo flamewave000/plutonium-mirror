@@ -74,6 +74,8 @@ fetch('https://raw.githubusercontent.com/flamewave000/plutonium-mirror/master/mi
 			if (mirror === 'extension') filterUrls.push(mirrorUrl.concat('*'));
 			else filterUrls.push(mirrorUrl.replace(/^.+:/, '*:').concat('*'));
 		}
+		// Add the static Roll20 URL filter
+		filterUrls.push("*://imgsrv.roll20.net/*");
 		bindListeners();
 	});
 
