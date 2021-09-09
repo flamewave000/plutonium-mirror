@@ -55,7 +55,8 @@ v1.x [![GitHub release (by tag)](https://img.shields.io/github/downloads/flamewa
 [![Official Mirror](https://img.shields.io/badge/dynamic/json?label=Official%20Mirror&query=mirror1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://5etools-mirror-1.github.io)  
 [![Giddy's Mirror](https://img.shields.io/badge/dynamic/json?label=Giddy&query=mirror2&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://thegiddylimit.github.io)  
 [![DragonFlagon Mirror](https://img.shields.io/badge/dynamic/json?label=DragonFlagon&query=mirror3&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://5e-tools.dragonflagon.cafe)  
-[![Butterfly's Mirror](https://img.shields.io/badge/dynamic/json?label=Butterfly&query=mirror4&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://dnd5e.eclipseofbutterflies.ml)
+[![Butterfly's Mirror](https://img.shields.io/badge/dynamic/json?label=Butterfly&query=mirror4&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://dnd5e.eclipseofbutterflies.ml)  
+[![Fotoply's Mirror](https://img.shields.io/badge/dynamic/json?label=Fotoply&query=mirror5&url=https%3A%2F%2Fraw.githubusercontent.com%2Fflamewave000%2Fplutonium-mirror%2Fmaster%2Fmirrors.json)](https://5e-tools-mirror.tk/)
 
 ## For Developers
 
