@@ -15,10 +15,10 @@ For all Chromium based browsers, you can find the extension in the [Chrome Web S
 
 ### Manual Chromium Installation
 
-1. Download the `plutonium-mirror-X.X.zip` file from the [Latest Release](https://github.com/flamewave000/plutonium-mirror/releases/latest)
+1. Download the `plutonium-mirror-X.X.crx` file from the [Latest Release](https://github.com/flamewave000/plutonium-mirror/releases/latest)
 2. Open your browser's extensions page (ie. `chrome://extensions` or `brave://extensions`)
 3. In the top right corner, toggle ON the "Developer mode" switch.
-4. Drag+Drop the `plutonium-mirror-X.X.zip` file onto the extensions page.
+4. Drag+Drop the `plutonium-mirror-X.X.crx` file onto the extensions page.
 5. Enjoy!
 
 ## Mozilla Firefox [![Mozilla Add-on](https://img.shields.io/amo/users/plutonium-mirror?label=Mozilla%20Users)](https://addons.mozilla.org/en-CA/firefox/addon/plutonium-mirror/)
