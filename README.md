@@ -9,7 +9,7 @@ An Add-On for defining which Mirror to use for 5e Tools
 
 [![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Ddragonflagon%26type%3Dpatrons&style=for-the-badge)](https://patreon.com/dragonflagon)
 
-## Chromium Browsers (Chrome, Brave, Edge, Vivaldi, Epic, Slim, Torch, Comodo)
+## Chromium Browsers (Chrome, Brave, Edge, Vivaldi, Epic, Slim, Torch, Comodo) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/cmdfdklimdbgkakbnplpohmekimalljl?label=Chrome%20Users)
 
 For all Chromium based browsers, you can find the extension in the [Chrome Web Store](https://chrome.google.com/webstore/detail/plutonium-mirror/cmdfdklimdbgkakbnplpohmekimalljl)
 
